@@ -2,6 +2,7 @@
 @section('content')
   <div class="container">
 	<form class="form col-md-6 col-sm-12" method="post" action="{{URL('post/task')}}">
+		{{csrf_field();}}
 		<h2 class="jumbotron">Enter A Task</h2>
 		<div class="form-group">
 			<label for="title"> Task:</label>

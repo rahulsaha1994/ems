@@ -13,7 +13,9 @@ class TaskController extends Controller
 	public function __construct()
    {
         $this->middleware('auth');
-        $this->user_id = Auth::user()->id;
+        if(Auth::check()){
+        	$this->user_id = Auth::user()->id;	
+        }
         $this->curr_timestamp = strtotime(date("Y-m-d H:i:s"));
    }
     //show task insertion form

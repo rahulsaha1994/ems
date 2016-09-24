@@ -17,4 +17,6 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
+//Route::get('/home', 'HomeController@index');
+Route::get('/task', 'TaskController@index');
+Route::post('post/task', 'TaskController@saveTask');
